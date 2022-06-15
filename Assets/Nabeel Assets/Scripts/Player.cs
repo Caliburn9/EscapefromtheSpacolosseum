@@ -1,6 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public enum PlayerState
+{
+    Normal,
+    Powered
+}
 
 public class Player : MonoBehaviour
 {
@@ -9,21 +16,52 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     public LayerMask ladder;
     bool isGrounded, isClimbing;
+    public float poweredTimer;
+    PlayerState state;
+    static float startTime = 0.0f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Powerup")
         {
             collision.gameObject.SetActive(false);
-            Debug.Log("Shielded");
+            state = PlayerState.Powered;
+            Debug.Log("Powered Up");
         }
         
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            if (state == PlayerState.Normal)
+            {
+                SceneManager.LoadScene("Game1Level1");
+            } else 
+            if (state == PlayerState.Powered)
+            {
+                collision.gameObject.SetActive(false);
+            }
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        state = PlayerState.Normal;
+    }
+
+    void PoweredStateTimer(float timer)
+    {
+        startTime += Time.deltaTime * 2.0f;
+
+        if (startTime >= timer && state == PlayerState.Powered)
+        {
+            state = PlayerState.Normal;
+            Debug.Log("Back to Normal");
+        }
     }
 
     private void FixedUpdate()
@@ -39,10 +77,13 @@ public class Player : MonoBehaviour
         
         if (hitInfo.collider != null)
         {
-            //Climb
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (state != PlayerState.Powered)
             {
-                isClimbing = true;
+                //Climb
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    isClimbing = true;
+                }
             }
         } else
         {
@@ -63,6 +104,11 @@ public class Player : MonoBehaviour
         } else
         {
             rb.gravityScale = 1;
+        }
+
+        if (state == PlayerState.Powered)
+        {
+            PoweredStateTimer(poweredTimer);
         }
     }
 }

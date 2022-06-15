@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleAI : MonoBehaviour
 {
     float moveSpeed = 2.5f;
-    bool moveRight = true;
+    public bool moveRight;
     Rigidbody2D rb;
 
     public Transform wallCheck;

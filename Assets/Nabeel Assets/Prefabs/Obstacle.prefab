@@ -136,11 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74145b390da21b04c8da0000a53abf4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveRight: 1
   wallCheck: {fileID: 1219444357221227690}
   wallCheckRadius: 0.1
   whatisWall:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 64
 --- !u!1 &6788628020504963933
 GameObject:
   m_ObjectHideFlags: 0
