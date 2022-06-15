@@ -34,6 +34,7 @@ public class WaypointMoves : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
 
+
         if (transform.position == waypoints [waypointIndex].transform.position)
         {
             waypointIndex += 1;
