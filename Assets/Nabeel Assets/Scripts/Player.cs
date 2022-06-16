@@ -28,6 +28,11 @@ public class Player : MonoBehaviour
             state = PlayerState.Powered;
             Debug.Log("Powered Up");
         }
+
+        if (collision.tag == "Score")
+        {
+            ScoreManager.increaseScore(1);
+        }
         
     }
 
@@ -42,6 +47,7 @@ public class Player : MonoBehaviour
             if (state == PlayerState.Powered)
             {
                 collision.gameObject.SetActive(false);
+                ScoreManager.increaseScore(2);
             }
         }
     }

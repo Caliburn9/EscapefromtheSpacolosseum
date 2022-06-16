@@ -7,6 +7,7 @@ public class ObstacleSpawner : MonoBehaviour
     public int spawnAmount;
     float time = 0.0f;
     public float timer;
+    float minTimer, maxTimer;
     public GameObject Obstacle;
     public Transform spawnLocation;
     public bool obstisRight;
@@ -14,7 +15,8 @@ public class ObstacleSpawner : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
+        minTimer = timer - 2;
+        maxTimer = timer;
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class ObstacleSpawner : MonoBehaviour
         if (time >= timer)
         {
             time = 0.0f;
-            timer = Random.Range(1, timer);
+            timer = Random.Range(minTimer, maxTimer);
 
             if (spawnAmount != 0)
             {

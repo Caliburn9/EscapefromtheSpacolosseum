@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Obstacle
   - Powerup
+  - Score
   layers:
   - Default
   - TransparentFX
