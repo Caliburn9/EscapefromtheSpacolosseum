@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TopDownMovement : MonoBehaviour
 {
-    //public float moveSpeed;
+    
     public Rigidbody2D rb2d;
     private Vector2 moveInput;
 
@@ -12,6 +13,14 @@ public class TopDownMovement : MonoBehaviour
     float moveSpeed = 3f;
 
     // Start is called before the first frame update
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "CircleCollider")
+        {
+            SceneManager.LoadScene(3);
+        }
+    }
     void Start()
     {
         
