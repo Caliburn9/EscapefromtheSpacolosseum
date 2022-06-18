@@ -60,12 +60,13 @@
     <Compile Include="Assets\Nabeel Assets\Scripts\ObstacleAI.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\EenemySight.cs" />
+    <Compile Include="Assets\Nabeel Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\ObstacleSpawner.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\TopDownMovement.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\WaypointMoves.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\LevelControl.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\loadLevel.cs" />
-    <Compile Include="Assets\Nabeel Assets\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Nabeel Assets\Scripts\ScoreCanvas.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Aly Assets\TextMesh Pro\Shaders\TMPro.cginc" />

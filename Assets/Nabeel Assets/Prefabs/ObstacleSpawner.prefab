@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAmount: 3
-  timer: 2
+  timer: 4
   Obstacle: {fileID: 5874889865953900437, guid: 38ee48a598b1ebf45a7ac20ed9b42e2a, type: 3}
   spawnLocation: {fileID: 1523408981242138545}
   obstisRight: 1

@@ -11,16 +11,20 @@ public enum PlayerState
 
 public class Player : MonoBehaviour
 {
-    public float speed, jumpForce, raycastDist;
+    //Private
     float horInput, vertInput;
     Rigidbody2D rb;
-    public LayerMask ladder;
     bool isGrounded, isClimbing;
-    public float poweredTimer;
     PlayerState state;
-    static float startTime = 0.0f;
-    public Sprite normalSpr, poweredSpr;
     SpriteRenderer spriteRender;
+    static float startTime = 0.0f;
+
+    //Public 
+    public float speed, jumpForce, raycastDist;
+    public Sprite normalSpr, poweredSpr;
+    public float poweredTimer;
+    public string currLevel, nextLevel;
+    public LayerMask ladder;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,13 +42,13 @@ public class Player : MonoBehaviour
 
         if (collision.tag == "Door")
         {
-            SceneManager.LoadScene("Game1Level1");
-            Debug.Log("Door");
+            
+            SceneManager.LoadScene(nextLevel);
         }
 
         if (collision.tag == "Deathzone")
         {
-            SceneManager.LoadScene("Game1Level1");
+            SceneManager.LoadScene(currLevel);
         }
     }
 
@@ -54,7 +58,7 @@ public class Player : MonoBehaviour
         {
             if (state == PlayerState.Normal)
             {
-                SceneManager.LoadScene("Game1Level1");
+                SceneManager.LoadScene(currLevel);
             } else 
             if (state == PlayerState.Powered)
             {
