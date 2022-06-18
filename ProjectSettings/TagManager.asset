@@ -7,6 +7,8 @@ TagManager:
   - Obstacle
   - Powerup
   - Score
+  - Door
+  - Deathzone
   layers:
   - Default
   - TransparentFX

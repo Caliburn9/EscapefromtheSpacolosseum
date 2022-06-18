@@ -19,12 +19,14 @@ public class Player : MonoBehaviour
     public float poweredTimer;
     PlayerState state;
     static float startTime = 0.0f;
+    public Sprite normalSpr, poweredSpr;
+    SpriteRenderer spriteRender;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Powerup")
         {
-            collision.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
             state = PlayerState.Powered;
             Debug.Log("Powered Up");
         }
@@ -33,7 +35,17 @@ public class Player : MonoBehaviour
         {
             ScoreManager.increaseScore(1);
         }
-        
+
+        if (collision.tag == "Door")
+        {
+            SceneManager.LoadScene("Game1Level1");
+            Debug.Log("Door");
+        }
+
+        if (collision.tag == "Deathzone")
+        {
+            SceneManager.LoadScene("Game1Level1");
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -46,7 +58,7 @@ public class Player : MonoBehaviour
             } else 
             if (state == PlayerState.Powered)
             {
-                collision.gameObject.SetActive(false);
+                Destroy(collision.gameObject);
                 ScoreManager.increaseScore(2);
             }
         }
@@ -56,7 +68,9 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRender = GetComponent<SpriteRenderer>();
         state = PlayerState.Normal;
+        spriteRender.sprite = normalSpr;
     }
 
     void PoweredStateTimer(float timer)
@@ -67,6 +81,7 @@ public class Player : MonoBehaviour
         {
             state = PlayerState.Normal;
             Debug.Log("Back to Normal");
+            startTime = 0.0f;
         }
     }
 
@@ -115,6 +130,14 @@ public class Player : MonoBehaviour
         if (state == PlayerState.Powered)
         {
             PoweredStateTimer(poweredTimer);
+        }
+
+        if (state == PlayerState.Normal)
+        {
+            spriteRender.sprite = normalSpr;
+        } else if (state == PlayerState.Powered)
+        {
+            spriteRender.sprite = poweredSpr;
         }
     }
 }
