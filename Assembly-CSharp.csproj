@@ -66,7 +66,9 @@
     <Compile Include="Assets\Aly Assets\Scripts\WaypointMoves.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\LevelControl.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\loadLevel.cs" />
-    <Compile Include="Assets\Nabeel Assets\Scripts\ScoreCanvas.cs" />
+    <Compile Include="Assets\Nabeel Assets\Scripts\DisplayScore.cs" />
+    <Compile Include="Assets\Nabeel Assets\Scripts\LevelLoader.cs" />
+    <Compile Include="Assets\Nabeel Assets\Scripts\PauseManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Aly Assets\TextMesh Pro\Shaders\TMPro.cginc" />

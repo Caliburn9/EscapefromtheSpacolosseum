@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
     public float speed, jumpForce, raycastDist;
     public Sprite normalSpr, poweredSpr;
     public float poweredTimer;
-    public string currLevel, nextLevel;
+    public string nextLevel;
     public LayerMask ladder;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
 
         if (collision.tag == "Deathzone")
         {
-            SceneManager.LoadScene(currLevel);
+            SceneManager.LoadScene("Game1Score");
         }
     }
 
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         {
             if (state == PlayerState.Normal)
             {
-                SceneManager.LoadScene(currLevel);
+                SceneManager.LoadScene("Game1Score");
             } else 
             if (state == PlayerState.Powered)
             {

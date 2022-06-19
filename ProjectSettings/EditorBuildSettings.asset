@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/MainMenu.unity
+    guid: aad2f2020f1857f49ac6c048885b4fa3
+  - enabled: 1
     path: Assets/Nabeel Assets/Scenes/Game1L1.unity
     guid: 0257597e036217543a63bff1fac4166b
   - enabled: 1
@@ -14,4 +17,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Nabeel Assets/Scenes/Game1L3.unity
     guid: 5eac5b018738b624fbdac4125ff1cd02
+  - enabled: 1
+    path: Assets/Nabeel Assets/Scenes/Game1Score.unity
+    guid: c824c778c84b2bf4db42880cc496bbaa
+  - enabled: 1
+    path: Assets/Aly Assets/Scenes/Game2L1.unity
+    guid: ee883ba80d017394b9a44ead622e50ca
+  - enabled: 1
+    path: Assets/Aly Assets/Scenes/Game2L2.unity
+    guid: 46e92db6eaa96014f867f74eecdb3dfe
+  - enabled: 1
+    path: Assets/Aly Assets/Scenes/Game2L3.unity
+    guid: de7c2a494cc7d5f439a6be0719fae466
+  - enabled: 1
+    path: Assets/Aly Assets/Scenes/Game2Lose.unity
+    guid: 3c1f3828ee407334daf10fb03034be82
+  - enabled: 1
+    path: Assets/Aly Assets/Scenes/Game2Win.unity
+    guid: 30744280cfd872849aa6408e1b293e65
   m_configObjects: {}

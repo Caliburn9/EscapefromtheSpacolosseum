@@ -18,7 +18,7 @@ public class TopDownMovement : MonoBehaviour
     {
         if (collision.tag == "CircleCollider")
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene("Game2Lose");
         }
     }
     void Start()
