@@ -17,7 +17,7 @@ public class DisplayScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 3)
+        if (SceneManager.GetActiveScene().buildIndex == 4)
         {
             textDisplay.text = textDisplay.text = "Score: " + ScoreManager.score.ToString() + "\n" + "HighScore: " + PlayerPrefs.GetInt("Highscore");
         } else
