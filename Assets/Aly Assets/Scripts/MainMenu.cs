@@ -13,4 +13,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Game2L1");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

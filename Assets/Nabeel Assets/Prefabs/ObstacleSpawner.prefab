@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83a634dee137854fbe8b42dd5bd5df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnAmount: 3
+  spawnAmount: 15
   timer: 4
   Obstacle: {fileID: 5874889865953900437, guid: 38ee48a598b1ebf45a7ac20ed9b42e2a, type: 3}
   spawnLocation: {fileID: 1523408981242138545}
