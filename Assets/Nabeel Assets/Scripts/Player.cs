@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public float poweredTimer;
     public string nextLevel;
     public LayerMask ladder;
+    public int ScoreAmount;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -35,9 +36,9 @@ public class Player : MonoBehaviour
             Debug.Log("Powered Up");
         }
 
-        if (collision.tag == "Score")
+        if (collision.tag == "Score" && isClimbing != true)
         {
-            ScoreManager.increaseScore(1);
+            ScoreManager.increaseScore(ScoreAmount);
         }
 
         if (collision.tag == "Door")
@@ -63,7 +64,7 @@ public class Player : MonoBehaviour
             if (state == PlayerState.Powered)
             {
                 Destroy(collision.gameObject);
-                ScoreManager.increaseScore(2);
+                ScoreManager.increaseScore(ScoreAmount + 1);
             }
         }
     }

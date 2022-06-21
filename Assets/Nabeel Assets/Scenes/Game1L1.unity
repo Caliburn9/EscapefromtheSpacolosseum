@@ -1285,7 +1285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1523408981501226604, guid: d1d112f8d3b3df243bd95a5037114fb6, type: 3}
       propertyPath: spawnAmount
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1523408981501226605, guid: d1d112f8d3b3df243bd95a5037114fb6, type: 3}
       propertyPath: m_Name
@@ -1677,8 +1677,12 @@ PrefabInstance:
       value: Game1L2
       objectReference: {fileID: 0}
     - target: {fileID: 7813421560591629780, guid: f21e64ff7a283e840a96e938508c2b37, type: 3}
+      propertyPath: ScoreAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813421560591629780, guid: f21e64ff7a283e840a96e938508c2b37, type: 3}
       propertyPath: poweredTimer
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7813421560591629781, guid: f21e64ff7a283e840a96e938508c2b37, type: 3}
       propertyPath: m_Name

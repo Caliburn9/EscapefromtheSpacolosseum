@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleAI : MonoBehaviour
 {
-    float moveSpeed = 2.5f;
+    float moveSpeed = 5f;
     public bool moveRight;
     Rigidbody2D rb;
 
