@@ -149,7 +149,7 @@ MonoBehaviour:
   raycastDist: 128
   normalSpr: {fileID: 21300000, guid: 8fe1cfe0bd0f5454e891ceb52a1b3ad1, type: 3}
   poweredSpr: {fileID: 21300000, guid: 9f9f9455f80ebca489d414c22bc22dc2, type: 3}
-  poweredTimer: 10
+  poweredTimer: 15
   nextLevel: 
   ladder:
     serializedVersion: 2
