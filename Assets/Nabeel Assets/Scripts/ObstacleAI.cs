@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObstacleAI : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class ObstacleAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if (SceneManager.GetActiveScene().name == "Game1L3")
+        {
+            moveRight = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

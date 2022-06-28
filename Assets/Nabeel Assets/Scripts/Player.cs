@@ -47,6 +47,7 @@ public class Player : MonoBehaviour
             SceneManager.LoadScene(nextLevel);
         }
 
+        //Death
         if (collision.tag == "Deathzone")
         {
             SceneManager.LoadScene("Game1Score");
@@ -57,6 +58,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
+            //Death
             if (state == PlayerState.Normal)
             {
                 SceneManager.LoadScene("Game1Score");
