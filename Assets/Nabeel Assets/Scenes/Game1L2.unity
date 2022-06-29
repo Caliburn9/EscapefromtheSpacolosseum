@@ -913,6 +913,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5181633988162993632, guid: 9a6e0c2e4adca25448f335ed8321168c, type: 3}
   m_PrefabInstance: {fileID: 1034098463}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1080687498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1959331469788325154, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: NextLevel
+      value: Game1L3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325156, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_Name
+      value: LevelManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0618584
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.059095
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -458.7027
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959331469788325157, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+--- !u!114 &1080687499 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1959331469788325154, guid: 51568b39e62358544981fa5e7fe5297a, type: 3}
+  m_PrefabInstance: {fileID: 1080687498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65de9e64771a0b64b8a62c2972630e5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1095933575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1333,6 +1405,10 @@ PrefabInstance:
       propertyPath: PauseCanvas
       value: 
       objectReference: {fileID: 388864577}
+    - target: {fileID: 603431233800428005, guid: 5a102c061382acc4fb35ad13aa0cdb46, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1080687499}
     - target: {fileID: 603431233800428006, guid: 5a102c061382acc4fb35ad13aa0cdb46, type: 3}
       propertyPath: m_Name
       value: PauseManager
@@ -1796,6 +1872,10 @@ PrefabInstance:
       propertyPath: nextLevel
       value: Game1L3
       objectReference: {fileID: 0}
+    - target: {fileID: 7813421560591629780, guid: f21e64ff7a283e840a96e938508c2b37, type: 3}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1080687499}
     - target: {fileID: 7813421560591629780, guid: f21e64ff7a283e840a96e938508c2b37, type: 3}
       propertyPath: poweredTimer
       value: 6

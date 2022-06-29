@@ -60,7 +60,6 @@
     <Compile Include="Assets\Nabeel Assets\Scripts\ScoreCanvas.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\PauseManager.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\ObstacleAI.cs" />
-    <Compile Include="Assets\Nabeel Assets\Scripts\LevelLoader.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\EenemySight.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\ScoreManager.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="Assets\Aly Assets\Scripts\LevelControl.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\loadLevel.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\DisplayScore.cs" />
+    <Compile Include="Assets\Nabeel Assets\Scripts\LevelManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Aly Assets\TextMesh Pro\Shaders\TMPro.cginc" />

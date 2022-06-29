@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseManager : MonoBehaviour
 {
     public Canvas PauseCanvas;
+    public LevelManager levelManager;
     bool isPaused = false;
 
     // Start is called before the first frame update

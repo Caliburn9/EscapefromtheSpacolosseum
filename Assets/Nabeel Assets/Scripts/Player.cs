@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public enum PlayerState
 {
@@ -23,9 +22,9 @@ public class Player : MonoBehaviour
     public float speed, jumpForce, raycastDist;
     public Sprite normalSpr, poweredSpr;
     public float poweredTimer;
-    public string nextLevel;
     public LayerMask ladder;
     public int ScoreAmount;
+    public LevelManager levelManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -43,14 +42,14 @@ public class Player : MonoBehaviour
 
         if (collision.tag == "Door")
         {
-            
-            SceneManager.LoadScene(nextLevel);
+
+            levelManager.LoadNextLevel();
         }
 
         //Death
         if (collision.tag == "Deathzone")
         {
-            SceneManager.LoadScene("Game1Score");
+            levelManager.ScoreMenu();
         }
     }
 
@@ -61,8 +60,9 @@ public class Player : MonoBehaviour
             //Death
             if (state == PlayerState.Normal)
             {
-                SceneManager.LoadScene("Game1Score");
-            } else 
+                levelManager.ScoreMenu();
+            }
+            else 
             if (state == PlayerState.Powered)
             {
                 Destroy(collision.gameObject);
