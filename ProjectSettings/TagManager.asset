@@ -9,6 +9,8 @@ TagManager:
   - Score
   - Door
   - Deathzone
+  - CircleCollider
+  - Ladder
   layers:
   - Default
   - TransparentFX

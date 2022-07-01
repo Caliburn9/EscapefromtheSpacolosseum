@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0768524b04360f54a9cd0309e92c61db, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3727734b1a8003b4088709500e0d5607, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,9 +142,6 @@ MonoBehaviour:
   whatisWall:
     serializedVersion: 2
     m_Bits: 64
-  whatisObst:
-    serializedVersion: 2
-    m_Bits: 128
 --- !u!1 &6788628020504963933
 GameObject:
   m_ObjectHideFlags: 0
