@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Game1L1");
     }
+
     public void LoadGame2()
     {
         SceneManager.LoadScene("Game2L1");
@@ -17,5 +18,6 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
+        Debug.Log("Quit");
     }
 }
