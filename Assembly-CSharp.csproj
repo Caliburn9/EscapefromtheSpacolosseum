@@ -71,6 +71,7 @@
     <Compile Include="Assets\Nabeel Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Aly Assets\Scripts\loadLevel.cs" />
     <Compile Include="Assets\Nabeel Assets\Scripts\DisplayScore.cs" />
+    <Compile Include="Assets\Nabeel Assets\Scripts\PlayerFeet.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Aly Assets\TextMesh Pro\Shaders\TMPro.cginc" />

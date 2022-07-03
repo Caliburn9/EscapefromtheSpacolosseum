@@ -11,6 +11,7 @@ TagManager:
   - Deathzone
   - CircleCollider
   - Ladder
+  - Floor
   layers:
   - Default
   - TransparentFX

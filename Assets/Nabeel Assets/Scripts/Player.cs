@@ -15,16 +15,17 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     bool isGrounded, isClimbing, canClimb;
     PlayerState state;
-    SpriteRenderer spriteRender;
+    Animator anim;
     static float startTime = 0.0f;
 
     //Public 
     public float speed, jumpForce, raycastDist;
-    public Sprite normalSpr, poweredSpr;
     public float poweredTimer;
     public LayerMask ladder;
     public int ScoreAmount;
     public LevelManager levelManager;
+    public AnimatorOverrideController normPlayer, poweredPlayer;
+    public PlayerFeet playerFeet;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
         if (collision.tag == "Deathzone")
         {
             levelManager.ScoreMenu();
+            anim.SetBool("isDead", true);
         }
     }
 
@@ -74,6 +76,7 @@ public class Player : MonoBehaviour
             if (state == PlayerState.Normal)
             {
                 levelManager.ScoreMenu();
+                anim.SetBool("isDead", true);
             }
             else 
             if (state == PlayerState.Powered)
@@ -88,9 +91,8 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        spriteRender = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
         state = PlayerState.Normal;
-        spriteRender.sprite = normalSpr;
         canClimb = false;
     }
 
@@ -114,9 +116,29 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+        anim.SetFloat("Speed", Mathf.Abs(horInput));
+        anim.SetBool("isClimbing", isClimbing);
+
+        if (playerFeet.onGround == true)
+        {
+            anim.SetBool("isJumping", false);
+        } else if (playerFeet.onGround == false)
+        {
+            anim.SetBool("isJumping", true);
+        }
+
+        if (horInput > 0)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
+        else if (horInput < 0)
+        {
+            transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
         isGrounded = rb.velocity.y < .1f && rb.velocity.y > -.1f;
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, raycastDist, ladder);
-        
+
         if (hitInfo.collider != null && canClimb == true)
         {
             if (state != PlayerState.Powered)
@@ -124,7 +146,7 @@ public class Player : MonoBehaviour
                 //Climb
                 if (Input.GetKey(KeyCode.UpArrow))
                 {
-                     isClimbing = true;
+                    isClimbing = true;
                 }
             }
         } else 
@@ -136,7 +158,8 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded && canClimb == false)
             {
                 rb.velocity = Vector2.up * jumpForce;
-            }
+                playerFeet.onGround = false;
+            } 
         }
 
         if (isClimbing && hitInfo.collider != null)
@@ -156,10 +179,11 @@ public class Player : MonoBehaviour
 
         if (state == PlayerState.Normal)
         {
-            spriteRender.sprite = normalSpr;
+            anim.runtimeAnimatorController = normPlayer as RuntimeAnimatorController;
         } else if (state == PlayerState.Powered)
         {
-            spriteRender.sprite = poweredSpr;
+            anim.runtimeAnimatorController = poweredPlayer as RuntimeAnimatorController;
+
         }
     }
 }
