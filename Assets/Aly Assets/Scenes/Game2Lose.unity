@@ -234,7 +234,7 @@ RectTransform:
   m_GameObject: {fileID: 341878880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7189, y: 1.7189, z: 1.7189}
+  m_LocalScale: {x: 3.0293894, y: 3.5237448, z: 1.7189}
   m_Children:
   - {fileID: 1269637678}
   m_Father: {fileID: 602155363}
@@ -612,15 +612,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Play Again?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3b3f20619eb15844baac8cca57d6f6da, type: 2}
+  m_sharedMaterial: {fileID: -5681244433210903282, guid: 3b3f20619eb15844baac8cca57d6f6da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4177526783
-  m_fontColor: {r: 1, g: 1, b: 1, a: 0.972549}
+    rgba: 4160749568
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.972549}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -746,8 +746,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: You Lost
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3b3f20619eb15844baac8cca57d6f6da, type: 2}
+  m_sharedMaterial: {fileID: -5681244433210903282, guid: 3b3f20619eb15844baac8cca57d6f6da, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -849,7 +849,7 @@ RectTransform:
   m_GameObject: {fileID: 1337420134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.93586, y: 0.93586, z: 0.93586}
+  m_LocalScale: {x: 1.6493597, y: 1.918513, z: 0.93586}
   m_Children:
   - {fileID: 772826343}
   m_Father: {fileID: 449019979}
@@ -857,7 +857,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 62.42354}
+  m_AnchoredPosition: {x: 0, y: -91}
   m_SizeDelta: {x: 300, y: 125.213}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1337420136

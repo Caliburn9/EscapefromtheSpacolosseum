@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         if (collision.tag == "Ladder")
         {
             canClimb = false;
-        }
+        }  
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -183,7 +183,6 @@ public class Player : MonoBehaviour
         } else if (state == PlayerState.Powered)
         {
             anim.runtimeAnimatorController = poweredPlayer as RuntimeAnimatorController;
-
         }
     }
 }

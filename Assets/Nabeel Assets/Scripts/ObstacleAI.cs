@@ -8,6 +8,7 @@ public class ObstacleAI : MonoBehaviour
     float moveSpeed = 5f;
     public bool moveRight;
     Rigidbody2D rb;
+    Animator anim;
 
     public Transform wallCheck;
     public float wallCheckRadius;
@@ -18,6 +19,7 @@ public class ObstacleAI : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         if (SceneManager.GetActiveScene().name == "Game1L3")
         {
             moveRight = false;
@@ -46,10 +48,12 @@ public class ObstacleAI : MonoBehaviour
         {
             transform.localScale = new Vector3(1f, 1f, 1f); 
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+            anim.SetBool("Right", true);
         } else
         {
             transform.localScale = new Vector3(-1f, 1f, 1f);
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
+            anim.SetBool("Right", false);
         }
     }
 }

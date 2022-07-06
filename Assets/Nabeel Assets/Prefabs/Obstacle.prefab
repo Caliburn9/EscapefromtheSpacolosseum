@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1037636215171081751}
   - component: {fileID: 7854913210210058629}
   - component: {fileID: 3001197051066504492}
+  - component: {fileID: 8234895189992228286}
   m_Layer: 0
   m_Name: Obstacle
   m_TagString: Obstacle
@@ -142,6 +143,25 @@ MonoBehaviour:
   whatisWall:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &8234895189992228286
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874889865953900437}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e17dbb231cd8574e88ba673cfd6a6f7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6788628020504963933
 GameObject:
   m_ObjectHideFlags: 0
